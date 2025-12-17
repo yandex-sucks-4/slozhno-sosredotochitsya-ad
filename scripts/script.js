@@ -37,14 +37,14 @@ function setActiveButton(buttonsArray, theme) {
     button.removeAttribute('disabled');
   });
   const target = buttonsArray.find((button) =>
-    button.classList.contains(`header__theme-menu-button_type_${theme}`)
+    button.classList.contains(`header__theme-menu-button_type_${theme}`),
   );
   if (target) {
     target.classList.add('header__theme-menu-button_active');
     target.setAttribute('disabled', true);
   } else {
     const autoButton = document.querySelector(
-      '.header__theme-menu-button_type_auto'
+      '.header__theme-menu-button_type_auto',
     );
     autoButton.classList.add('header__theme-menu-button_active');
     autoButton.setAttribute('disabled', true);
